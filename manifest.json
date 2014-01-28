@@ -1,0 +1,20 @@
+{
+  "name": "cens█r",
+  "description": "Block out words of your choice.",
+  "version": "0.0.1",
+  "permissions": [
+    "activeTab"
+  ],
+  "browser_action": {
+    "default_title": "Block out words of your choice.",
+    "default_popup": "browser_action.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["scripts/findAndReplaceDOMText.js", "replace.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "manifest_version": 2
+}
