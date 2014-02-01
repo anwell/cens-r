@@ -3,18 +3,19 @@
   "description": "Block out words of your choice.",
   "version": "0.0.1",
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "storage"
   ],
   "browser_action": {
-    "default_title": "Block out words of your choice.",
-    "default_popup": "browser_action.html"
+    "default_title": "Block out words of your choice."
   },
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
-      "js": ["scripts/findAndReplaceDOMText.js", "replace.js"],
+      "js": ["findAndReplaceDOMText.js", "replace.js"],
       "run_at": "document_end"
     }
   ],
-  "manifest_version": 2
+  "manifest_version": 2,
+  "options_page": "browser_action.html"
 }

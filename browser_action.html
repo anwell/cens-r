@@ -1,17 +1,22 @@
-<!doctype html>
-<style type="text/css">
-	#mainPopup {
-		padding: 10px;
-		height: 200px;
-		width: 400px;
-		font-family: Helvetica, Ubuntu, Arial, sans-serif;
-	}
-	h1 {
-		font-size: 2em;
-	}
-</style>
-
-<div id="mainPopup">
-<h1>Hello extensionizr!</h1>
-<p>To shut this popup down, edit the manifest file and remove the "default popup" key. To edit it, just edit ext/browser_action/browser_action.html. The CSS is there, too.</p>
-</div>
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>My Test Extension Options</title>
+      <style type="text/css">
+         #words {
+         padding: 10px;
+         height: 200px;
+         width: 400px;
+         font-family: Helvetica, Ubuntu, Arial, sans-serif;
+         }
+      </style>
+   </head>
+   <body>
+      <h1>cens&#x2588;r</h1>
+      Add a words or phrases separated by commas and hit Save to begin the censoring.
+      <div id="status"></div>
+      <textarea id="words" placeholder="Type in the words you want blocked out here.    Each, word, or, phrase, separated, by, a, comma."></textarea>
+      <button id="save">Save</button>
+      <script src="browser_action.js"></script>
+   </body>
+</html>
